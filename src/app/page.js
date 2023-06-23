@@ -1,7 +1,7 @@
 import { GraphQLClient, gql } from "graphql-request";
 import Card from "./components/Card";
 const graphcms = new GraphQLClient(
-  `${process.env.GRAPHCMS_TOKEN}`
+  `https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/${process.env.GRAPHCMS_TOKEN}/master`
 );
 
 const QUERY = gql`
