@@ -28,15 +28,15 @@ const QUERY = gql`
   }
 `;
 
-export async function getServerSideProps() {
-  const { posts } = await graphcms.request(QUERY);
-  return {
-    props: {
-      posts: [],
-    },
-    revalidate: 10,
-  };
-}
+// export async function getServerSideProps() {
+//   const { posts } = await graphcms.request(QUERY);
+//   return {
+//     props: {
+//       posts: [],
+//     },
+//     revalidate: 10,
+//   };
+// }
 
 export default async function Home() {
   const { posts } = await graphcms.request(QUERY);
